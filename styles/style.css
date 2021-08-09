@@ -34,6 +34,7 @@ h2, button, #cancel-order {
 
 p, #change-order {
   font-weight: 500;
+  line-height: 1.6;
 }
 
 /* Card */
@@ -43,15 +44,13 @@ p, #change-order {
   display: flex;
   align-items: center;
   width: 80%;
-  margin: 2em auto 0;
+  margin: 0 auto;
+  padding-top: 3em; /* for now */
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: white;
-  border-radius: 20px;
+  border-radius:20px;
 }
 
 .hero-image {
@@ -59,7 +58,46 @@ p, #change-order {
   border-radius: 20px 20px 0 0;
 }
 
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.order-heading {
+  padding: 1.5em;
+}
+
+.order-graph {
+  padding-bottom: 2em;
+}
 
 .summary {
   display: flex;
+  border-radius: 10px;
+  background-color: var(--very-pale-blue);
+  padding: 1em 0;
+  align-items: center;
+  margin-bottom: 2em; 
+}
+
+.summary-image {
+  flex-grow: 1;
+}
+
+.summary-plan {
+  text-align: left;
+  padding-left: 1em;
+  flex-grow: -1;
+}
+
+.summary-change {
+  flex-grow: 5;
+  text-align: right;
+  padding-right: 1em;
 }
