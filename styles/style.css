@@ -28,6 +28,7 @@ body {
   background-image: url("../images/pattern-background-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top;
   font-size: 16px;
   background-color: var(--pale-blue);
 }
@@ -77,12 +78,16 @@ p {
 /* Card */
 
 .card-wrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 10%;
   display: flex;
-  align-items: center;
   width: 80%;
   margin: 0 auto;
-  padding-top: 3em; /* for now */
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
@@ -96,8 +101,6 @@ p {
 }
 
 .info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -153,4 +156,16 @@ p {
 .payment-button:hover {
   cursor: pointer;
   background-color: var(--active-bright-blue);
+}
+
+/* Media Queiries */
+@media only screen and (min-width: 400px) {
+  body {
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+  }
+
+  .card-wrap {
+    max-width: 400px;
+  }
 }
